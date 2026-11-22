@@ -197,7 +197,6 @@ A project built through creativity, engineering, research, and collaboration.
         width="160"
         height="160"
         alt="AHK811 — Abdul Hannan Kashif, Founder and Project Lead"
-/>
       />
       <br/>
       <h3>Abdul Hannan Kashif</h3>
