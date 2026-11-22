@@ -1,0 +1,328 @@
+{
+ "definitions": {
+  "primary_area_method": "pyproj Geod(ellps=WGS84).geometry_area_perimeter on EPSG:4326 rings",
+  "cross_check_method": "planar area of the same geometry reprojected to EPSG:32642",
+  "administrative_area": "area of the L1 OSM district polygon, unmodified",
+  "land_area": "administrative_area intersected with the OSMData land polygon layer",
+  "mapped_water_area": "administrative_area intersected with the OSMData water polygon layer",
+  "land_water_overlap": "area inside the district that is in BOTH the land and water layers",
+  "unclassified_area": "administrative_area minus the area covered by the UNION of the land and water layers, i.e. inside the boundary but in neither layer",
+  "unclassified_interpretation": "NOT labelled as ocean. In coastal districts open sea is the likely explanation, but that is an inference, not a measured classification, because no independent bathymetry or sea mask was used.",
+  "area_outside_land_polygon": "administrative_area minus the area inside the land layer",
+  "conservation_identity": "A_T = A_L + A_W - A_Lw + A_U",
+  "identity_derivation": "holds by construction because A_U is DEFINED as A_T minus the area covered by land union water, so the residual measures arithmetic and implementation consistency, not geographic correctness",
+  "mutually_exhaustive": "land union water covers the district exactly when A_U is zero",
+  "crs_of_layers": "all inputs EPSG:4326; no reprojection of stored geometry, only for measurement",
+  "l1_policy": "administrative geometries are read-only here and are never modified or shrunk"
+ },
+ "clip_box_lonlat": [
+  66.2,
+  24.3,
+  67.7,
+  25.8
+ ],
+ "c_free_gb_start": 24.012,
+ "d_free_gb_start": 140.805,
+ "extraction": [
+  {
+   "archive": "land-polygons-split-4326.zip",
+   "compressed_bytes": 930863091,
+   "uncompressed_bytes": 1347551580,
+   "seconds": 28.54,
+   "ratio": 1.448,
+   "mb_per_s": 47.2,
+   "internal_files": [
+    {
+     "path": "land-polygons-split-4326/land_polygons.shp",
+     "bytes": 1323891900
+    },
+    {
+     "path": "land-polygons-split-4326/land_polygons.dbf",
+     "bytes": 16648677
+    },
+    {
+     "path": "land-polygons-split-4326/land_polygons.shx",
+     "bytes": 7010028
+    },
+    {
+     "path": "land-polygons-split-4326/README.txt",
+     "bytes": 824
+    },
+    {
+     "path": "land-polygons-split-4326/land_polygons.prj",
+     "bytes": 145
+    },
+    {
+     "path": "land-polygons-split-4326/land_polygons.cpg",
+     "bytes": 6
+    }
+   ],
+   "c_free_gb_before": null,
+   "c_free_gb_after": 24.012
+  },
+  {
+   "archive": "water-polygons-split-4326.zip",
+   "compressed_bytes": 908939540,
+   "uncompressed_bytes": 1283557503,
+   "seconds": 26.18,
+   "ratio": 1.412,
+   "mb_per_s": 49.0,
+   "internal_files": [
+    {
+     "path": "water-polygons-split-4326/water_polygons.shp",
+     "bytes": 1282116408
+    },
+    {
+     "path": "water-polygons-split-4326/water_polygons.dbf",
+     "bytes": 1013368
+    },
+    {
+     "path": "water-polygons-split-4326/water_polygons.shx",
+     "bytes": 426740
+    },
+    {
+     "path": "water-polygons-split-4326/README.txt",
+     "bytes": 836
+    },
+    {
+     "path": "water-polygons-split-4326/water_polygons.prj",
+     "bytes": 145
+    },
+    {
+     "path": "water-polygons-split-4326/water_polygons.cpg",
+     "bytes": 6
+    }
+   ],
+   "c_free_gb_before": null,
+   "c_free_gb_after": 20.243
+  }
+ ],
+ "source_inspection": {
+  "land": {
+   "layer": "land_polygons",
+   "features": 876241,
+   "geometry_type": "Polygon",
+   "crs_auth": "EPSG",
+   "crs_code": "4326",
+   "is_geographic": true,
+   "is_projected": false,
+   "bounds": [
+    -180.0,
+    180.0,
+    -90.0,
+    83.665113
+   ],
+   "validity_scan": "sampled",
+   "scanned": 2000,
+   "empty": 0,
+   "invalid": 0,
+   "valid": 2000,
+   "null_geom": 0
+  },
+  "water": {
+   "layer": "water_polygons",
+   "features": 53330,
+   "geometry_type": "Polygon",
+   "crs_auth": "EPSG",
+   "crs_code": "4326",
+   "is_geographic": true,
+   "is_projected": false,
+   "bounds": [
+    -180.0,
+    180.0,
+    -78.73859,
+    90.0
+   ],
+   "validity_scan": "sampled",
+   "scanned": 2000,
+   "empty": 0,
+   "invalid": 0,
+   "valid": 2000,
+   "null_geom": 0
+  }
+ },
+ "clipping": {
+  "land": {
+   "source_features": 876241,
+   "clipped_features": 97,
+   "seconds": 2.42,
+   "bytes": 499250,
+   "source_extent": [
+    -180.0,
+    180.0,
+    -90.0,
+    83.6651
+   ],
+   "clipped_extent": [
+    66.2,
+    67.7,
+    24.3,
+    25.8
+   ]
+  },
+  "water": {
+   "source_features": 53330,
+   "clipped_features": 5,
+   "seconds": 103.55,
+   "bytes": 491666,
+   "source_extent": [
+    -180.0,
+    180.0,
+    -78.7386,
+    90.0
+   ],
+   "clipped_extent": [
+    66.2,
+    67.619094,
+    24.3,
+    25.628195
+   ]
+  }
+ },
+ "geometry_quality": {
+  "clipped_land": {
+   "layer": "land",
+   "features": 93,
+   "empty": 0,
+   "invalid_before_repair": 0,
+   "invalid_after_repair": 0,
+   "distinct_geometries": 93,
+   "duplicate_features": 0,
+   "overlapping_pairs": 0,
+   "overlap_area_km2": 0.0
+  },
+  "clipped_water": {
+   "layer": "water",
+   "features": 1,
+   "empty": 0,
+   "invalid_before_repair": 0,
+   "invalid_after_repair": 0,
+   "distinct_geometries": 1,
+   "duplicate_features": 0,
+   "overlapping_pairs": 0,
+   "overlap_area_km2": 0.0
+  }
+ },
+ "districts": [
+  {
+   "district": "Central",
+   "admin_area_km2": 63.97,
+   "land_km2": 63.97,
+   "mapped_water_km2": 0,
+   "land_water_overlap_km2": 0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 0,
+   "conservation_residual_km2": 0.0,
+   "government_km2": 69.0,
+   "land_vs_government_pct": -7.29,
+   "admin_planar_32642_km2": 63.98,
+   "land_planar_32642_km2": 63.98
+  },
+  {
+   "district": "East",
+   "admin_area_km2": 146.18,
+   "land_km2": 146.18,
+   "mapped_water_km2": 0,
+   "land_water_overlap_km2": 0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 0,
+   "conservation_residual_km2": 0.0,
+   "government_km2": 139.0,
+   "land_vs_government_pct": 5.16,
+   "admin_planar_32642_km2": 146.19,
+   "land_planar_32642_km2": 146.19
+  },
+  {
+   "district": "South",
+   "admin_area_km2": 116.03,
+   "land_km2": 85.25,
+   "mapped_water_km2": 30.77,
+   "land_water_overlap_km2": 0.0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 30.77,
+   "conservation_residual_km2": -1e-06,
+   "government_km2": 122.0,
+   "land_vs_government_pct": -30.12,
+   "admin_planar_32642_km2": 116.05,
+   "land_planar_32642_km2": 85.27
+  },
+  {
+   "district": "West",
+   "admin_area_km2": 188.42,
+   "land_km2": 188.42,
+   "mapped_water_km2": 0,
+   "land_water_overlap_km2": 0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 0,
+   "conservation_residual_km2": 0.0,
+   "government_km2": 370.0,
+   "land_vs_government_pct": -49.08,
+   "admin_planar_32642_km2": 188.45,
+   "land_planar_32642_km2": 188.45
+  },
+  {
+   "district": "Keamari",
+   "admin_area_km2": 2514.09,
+   "land_km2": 445.78,
+   "mapped_water_km2": 2068.31,
+   "land_water_overlap_km2": 0.0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 2068.31,
+   "conservation_residual_km2": -0.0,
+   "government_km2": 559.0,
+   "land_vs_government_pct": -20.25,
+   "admin_planar_32642_km2": 2515.37,
+   "land_planar_32642_km2": 445.94
+  },
+  {
+   "district": "Korangi",
+   "admin_area_km2": 114.44,
+   "land_km2": 101.47,
+   "mapped_water_km2": 12.97,
+   "land_water_overlap_km2": 0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 12.97,
+   "conservation_residual_km2": 1e-06,
+   "government_km2": 108.0,
+   "land_vs_government_pct": -6.04,
+   "admin_planar_32642_km2": 114.45,
+   "land_planar_32642_km2": 101.48
+  },
+  {
+   "district": "Malir",
+   "admin_area_km2": 2696.81,
+   "land_km2": 2643.16,
+   "mapped_water_km2": 53.66,
+   "land_water_overlap_km2": 0,
+   "unclassified_km2": 0.0,
+   "area_outside_land_km2": 53.66,
+   "conservation_residual_km2": -1e-06,
+   "government_km2": 2160.0,
+   "land_vs_government_pct": 22.37,
+   "admin_planar_32642_km2": 2696.63,
+   "land_planar_32642_km2": 2642.98
+  }
+ ],
+ "division": {
+  "admin_km2": 5839.94,
+  "land_km2": 3674.23,
+  "mapped_water_km2": 2165.71,
+  "overlap_km2": 0.0,
+  "unclassified_km2": 0.0,
+  "conservation_residual_km2": -1e-06
+ },
+ "partition": {
+  "parent_vs_district_symdiff_km2": 0,
+  "district_pair_overlaps": []
+ },
+ "keamari_wedge": {
+  "admin_km2": 2514.09,
+  "land_km2": 445.78,
+  "unclassified_km2": 0,
+  "outside_land_km2": 2068.31
+ },
+ "storage_end": {
+  "c_free_gb": 20.242,
+  "d_free_gb": 140.804
+ }
+}

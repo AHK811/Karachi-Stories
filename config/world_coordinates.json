@@ -1,0 +1,160 @@
+{
+ "alternatives_evaluated": [
+  {
+   "bounds_e_m": [
+    422762.18,
+    553854.68
+   ],
+   "name": "custom TM, central meridian 67.05E, k0 0.9996",
+   "reason_for_test": "zone 42N central meridian 69E lies about 170-200 km east of Karachi, so Karachi sits far from the meridian",
+   "verdict": "lower distortion but breaks the locked EPSG:32642 decision and OSM/UTM tooling familiarity; the measured 32642 error is already far below gameplay tolerance, so EPSG:32642 is retained"
+  }
+ ],
+ "axis_convention": {
+  "godot_x": "easting_m - E0, increases eastward",
+  "godot_y": "elevation_m - vertical_origin_m, increases upward",
+  "godot_z": "N0 - northing_m, increases southward, so north is negative Z",
+  "handedness": "right-handed Y-up, Godot 4 default"
+ },
+ "baseline_dataset": "canonical GIS v1.0.0",
+ "benchmark_chunk_size_m": 256,
+ "chunk_size_m": 512,
+ "derived_utc": "2026-11-22",
+ "engine": {
+  "godot_executable_found": false,
+  "note": "no Godot binary on PATH or under C:/D:/E: at depth 3; project.godot declares features 4.7 + GL Compatibility but that string is not evidence of an installed engine. The Godot-side implementation of this contract is therefore a specification, unverified until the editor is installed and a headless test is run."
+ },
+ "extent": {
+  "chunk_cols": 257,
+  "chunk_rows": 269,
+  "division_projected_m": [
+   225502.25,
+   2703445.329,
+   356734.086,
+   2840930.244
+  ],
+  "height_m": 168465.5,
+  "inside_utm_zone_42_only": true,
+  "lonlat": [
+   66.2,
+   24.3,
+   67.7,
+   25.8
+  ],
+  "masks_exceed_administrative_extent": true,
+  "projected_m": [
+   215797.751,
+   2688057.319,
+   369672.53,
+   2856522.787
+  ],
+  "width_m": 153874.8
+ },
+ "floating_origin": {
+  "rule": "global projected coordinates stay 64-bit and are kept separate from local Godot Vector3; rebasing must move physics bodies, navigation, cameras, particles and audio together or not at all",
+  "status": "deferred to M2.5"
+ },
+ "measured": {
+  "control_samples": [
+   {
+    "abs_diff_m": 0.0006,
+    "lat": 24.86,
+    "lon": 67.01,
+    "pyproj_e": 298936.4121,
+    "pyproj_n": 2750914.1968,
+    "snyder_e": 298936.4115,
+    "snyder_n": 2750914.1968
+   },
+   {
+    "abs_diff_m": 0.0008,
+    "lat": 24.8,
+    "lon": 66.9,
+    "pyproj_e": 287716.8457,
+    "pyproj_n": 2744434.61,
+    "snyder_e": 287716.8448,
+    "snyder_n": 2744434.6101
+   },
+   {
+    "abs_diff_m": 0.0003,
+    "lat": 24.75,
+    "lon": 67.3,
+    "pyproj_e": 328091.5117,
+    "pyproj_n": 2738333.991,
+    "snyder_e": 328091.5114,
+    "snyder_n": 2738333.991
+   },
+   {
+    "abs_diff_m": 0.0016,
+    "lat": 24.5,
+    "lon": 66.6,
+    "pyproj_e": 256798.8355,
+    "pyproj_n": 2711698.4197,
+    "snyder_e": 256798.8339,
+    "snyder_n": 2711698.4197
+   },
+   {
+    "abs_diff_m": 0.0001,
+    "lat": 25.67,
+    "lon": 67.58,
+    "pyproj_e": 357485.8432,
+    "pyproj_n": 2839904.3745,
+    "snyder_e": 357485.8431,
+    "snyder_n": 2839904.3746
+   },
+   {
+    "abs_diff_m": 0.003,
+    "lat": 25.1,
+    "lon": 66.29,
+    "pyproj_e": 226690.7531,
+    "pyproj_n": 2778763.8797,
+    "snyder_e": 226690.7501,
+    "snyder_n": 2778763.8797
+   },
+   {
+    "abs_diff_m": 0.0006,
+    "lat": 25.05,
+    "lon": 67.05,
+    "pyproj_e": 303281.241,
+    "pyproj_n": 2771901.9459,
+    "snyder_e": 303281.2404,
+    "snyder_n": 2771901.9459
+   }
+  ],
+  "independent_implementation_max_disagreement_m": 0.003,
+  "max_game_round_trip_error_m": 2e-09,
+  "max_lonlat_round_trip_error_m": 2e-09,
+  "scale_factor_over_division": {
+   "ew_worst_ppm": 493.5,
+   "max": 1.000497,
+   "max_pairwise_diff_ppm": 3.26,
+   "mean": 1.000097,
+   "min": 0.999868,
+   "ns_worst_ppm": 496.7,
+   "points": 209,
+   "samples": 418,
+   "worst_ppm": 496.7
+  }
+ },
+ "milestone": "M2.0",
+ "origin": {
+  "E0": 225280,
+  "N0": 2841088,
+  "change_policy": "changing E0/N0 after chunks exist requires a versioned migration",
+  "immutable": true,
+  "rule": "E0 = floor(min_easting/512)*512 and N0 = ceil(max_northing/512)*512 over the L1 administrative extent only, tile-aligned so every chunk index inside the division is non-negative. L2 and L3 reach the clip box because that is how they were cut, which is a processing artifact and deliberately not used to size the world",
+  "vertical_datum": "UNSET - no licensed elevation source; game Y uses a documented ground-height fallback of 0 m",
+  "vertical_origin_m": 0.0
+ },
+ "scale": "1 projected metre = 1 Godot unit",
+ "schema_version": 1,
+ "storage_crs": "EPSG:4326",
+ "transformations": {
+  "chunk_index": "chunk_x=floor((easting-E0)/512); chunk_z=floor((N0-northing)/512)",
+  "chunk_to_local": "local_x=easting-(E0+chunk_x*512); local_z=N0-northing-(chunk_z*512) then offset by chunk origin",
+  "game_to_gis": "x=game_x+E0; y=N0-game_z; lon,lat=epsg32642_to_lonlat(x,y); elev=game_y+vertical_origin_m",
+  "gis_to_game": "x=lonlat_to_epsg32642(lon,lat); game_x=x-E0; game_z=N0-y; game_y=elev-vertical_origin_m"
+ },
+ "units": "metre",
+ "working_crs": "EPSG:32642",
+ "working_crs_definition": "WGS 84 / UTM zone 42N, central meridian 69E, k0 0.9996, false E 500000, false N 0"
+}

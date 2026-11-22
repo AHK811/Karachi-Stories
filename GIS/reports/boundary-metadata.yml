@@ -1,0 +1,623 @@
+schema_version: 1
+recorded_by: M1 boundary source assessment
+recorded_at_utc: 2026-11-22T10:10:00Z
+status: >
+  provisional - administrative extent validated and unmodified; land and water classified with zero
+  unclassified area; terrestrial area 3674.23 km2 which is +4.17% against the 3527 km2 reference;
+  remaining open items are administrative rather than geometric
+
+purpose: >
+  Boundary polygon for clipping Karachi game data. Administrative coverage approved
+  by the project owner as Karachi Division, target reference area approximately
+  3,527 square kilometres, 1:1 metre scale.
+
+administrative_reference:
+  provider: Commissioner Office Karachi (Office of the Commissioner, Government of Sindh)
+  title: Area & Maps
+  url: https://commissionerkarachi.gos.pk/index.php/area-maps
+  retrieved_utc: 2026-11-22
+  media: HTML page plus one embedded raster image (images/map-1.jpg). No vector geometry.
+  role: authoritative documentary reference for structure and published areas only
+  division:
+    stated_area_sqkm: 3527
+    stated_district_count: 7
+    stated_subdivision_count: 31
+  districts:
+    - name: Central
+      area_sqkm: 69.00
+      subdivisions:
+        - {name: Gulberg, area_sqkm: 14.00}
+        - {name: Liaquatabad, area_sqkm: 6.00}
+        - {name: Nazimabad, area_sqkm: 8.00}
+        - {name: New Karachi, area_sqkm: 18.00}
+        - {name: New Nazimabad, area_sqkm: 23.00}
+    - name: East
+      area_sqkm: 139.00
+      subdivisions:
+        - {name: Ferozabad, area_sqkm: 20.00}
+        - {name: Gulshan-e-Iqbal, area_sqkm: 29.00}
+        - {name: Gulzar-e-Hijri, area_sqkm: 79.00}
+        - {name: Jamshed Quarters, area_sqkm: 11.00}
+    - name: South
+      area_sqkm: 122.00
+      subdivisions:
+        - {name: Arambagh, area_sqkm: 4.00}
+        - {name: Civil Lines, area_sqkm: 73.00}
+        - {name: Garden, area_sqkm: 4.00}
+        - {name: Lyari, area_sqkm: 6.00}
+        - {name: Saddar, area_sqkm: 35.00}
+    - name: West
+      area_sqkm: 370.00
+      subdivisions:
+        - {name: Mango Pir, area_sqkm: 342.00}
+        - {name: Mominabad, area_sqkm: 19.00}
+        - {name: Orangi Town, area_sqkm: 9.00}
+    - name: Keamari
+      area_sqkm: 559.00
+      subdivisions:
+        - {name: Baldia, area_sqkm: 34.00}
+        - {name: Harbor, area_sqkm: 50.00}
+        - {name: Maripur, area_sqkm: 450.00}
+        - {name: SITE, area_sqkm: 25.00}
+    - name: Korangi
+      area_sqkm: 108.00
+      subdivisions:
+        - {name: Korangi, area_sqkm: 59.00}
+        - {name: Landhi, area_sqkm: 19.00}
+        - {name: Model Colony, area_sqkm: 9.00}
+        - {name: Shah Faisal, area_sqkm: 21.00}
+    - name: Malir
+      area_sqkm: 2160.00
+      subdivisions:
+        - {name: Airport, area_sqkm: 41.00}
+        - {name: Bin Qasim, area_sqkm: 447.00}
+        - {name: Gadap, area_sqkm: 1104.00}
+        - {name: Ibrahim Hyderi, area_sqkm: 97.00}
+        - {name: Murad Memon, area_sqkm: 195.00}
+        - {name: Shah Mureed, area_sqkm: 276.00}
+  internal_consistency:
+    subdivision_count_sum: 31          # 5+4+5+3+4+4+6, computed
+    district_area_sum_sqkm: 3527.00    # 69+139+122+370+559+108+2160, computed
+    subdivision_area_sum_sqkm: 3527.00 # all 31 subdivision areas summed, computed
+    result: internally consistent at both tiers; area figures are published to 2 dp
+  naming_note: >
+    Uses pre-2023 district names (Central, East, South, West). A 2023 Sindh provincial
+    decision renamed four districts (East to Gulshan, West to Orangi, South to Karachi,
+    Central to Nazimabad). No legally authoritative notification text has been obtained,
+    so per project-owner instruction these government-published names are retained as
+    official-reference names and OSM names are stored separately as community aliases.
+
+primary_source:
+  id: osm-karachi-division-6080948
+  provider: OpenStreetMap contributors
+  licence: ODbL v1.0
+  licence_note: attribution to OpenStreetMap contributors required; share-alike review needed before distributing adapted extracts
+  geometry_type: OpenStreetMap administrative boundary relations and ways
+  original_crs: EPSG:4326
+  acquisition_route: >
+    OSM API relation full endpoint, one request for the division plus one request per
+    child district. Validated during M1: the division request alone does NOT expand the
+    seven child relations' own member ways and nodes, so it is insufficient for district
+    geometry and the seven additional requests are mandatory.
+  retrieved_utc: 2026-11-22T10:05:00Z
+  files:
+    - path: GIS/source/karachi-division-6080948.full.osm
+      bytes: 122845
+      sha256: 70d7df9a3501c363c12f0e3f30316194f1ace2b1c0692dbc0826f5f27a744a8e
+      payload: {node: 501, way: 18, relation: 8}
+    - path: GIS/source/osm-children/*.full.osm
+      note: seven child district relations, one file each
+  division_relation:
+    id: 6080948
+    admin_level: 5
+    boundary: administrative
+    wikidata: Q8660
+    name_en: Karachi Division
+    osm_official_name: "کراچی ڈویژن"
+    members: {relation: 7, way: 18, node: 2}
+    outer_ways: 18
+    inner_ways: 0
+    assembled_rings: 1
+    unclosed_rings: 0
+    vertex_count: 501
+  community_mapped_names_and_aliases:
+    level6_districts:
+      - {osm_relation: 16347667, osm_name: Orangi District,    matches_official: West}
+      - {osm_relation: 16349281, osm_name: Nazimabad District, matches_official: Central}
+      - {osm_relation: 16350242, osm_name: Gulshan District,   matches_official: East}
+      - {osm_relation: 16350632, osm_name: Korangi District,   matches_official: Korangi}
+      - {osm_relation: 16350836, osm_name: Karachi District,   matches_official: South}
+      - {osm_relation: 16351022, osm_name: Keamari District,   matches_official: Keamari}
+      - {osm_relation: 16351916, osm_name: Malir District,     matches_official: Malir}
+    level7_units:
+      count: 21
+      tier_note: >
+        OSM level 7 carries 21 Town units. This is a DIFFERENT tier from the 31
+        government subdivisions and the two must never be conflated.
+
+secondary_validation_source:
+  id: hdx-cod-ab-pak
+  dataset_title: Pakistan - Subnational Administrative Boundaries
+  provider: OCHA Field Information Services Section (FISS), published on HDX
+  dataset_id: cod-ab-pak
+  dataset_uuid: a64d1ff2-7158-48c7-887d-6af69ce21906
+  resource_uuid: d2752403-3c34-4e03-8b4e-3e55500ded10
+  url: https://data.humdata.org/dataset/a64d1ff2-7158-48c7-887d-6af69ce21906/resource/d2752403-3c34-4e03-8b4e-3e55500ded10/download/pak_admin_boundaries.shp.zip
+  licence: CC BY-IGO 3.0
+  licence_url: http://creativecommons.org/licenses/by/3.0/igo/legalcode
+  retrieved_utc: 2026-11-22T10:04:00Z
+  http_last_modified: "Fri, 14 Aug 2026 07:22:25 GMT"
+  bytes: 25496398
+  content_length_from_api: 25496398
+  content_length_matches_download: true
+  sha256: 04e634d5bd7f1a93d81ae993d6341daa4ed350741fe94eee9e9dce9958a46c86
+  format: ESRI Shapefile in zip, 60 entries
+  original_crs: >
+    EPSG:4326 WGS 84 geographic, read from pak_admin2.prj (GEOGCS["GCS_WGS_1984",
+    SPHEROID["WGS_84",6378137.0,298.257223563]]), not assumed
+  attribute_encoding: UTF-8 (pak_admin2.cpg)
+  vintage:
+    boundaries_created: 2022-09-02
+    valid_for_humanitarian_use: 2022-09-09
+    reviewed_for_accuracy: 2024-09-27
+    metadata_modified: 2026-08-14
+    version: v01
+    valid_on: 20220909
+    valid_on_distinct_values_in_admin2: [20220909]
+  record_counts:
+    admin0: {geometry_records: 1,   dbf_records: 1}
+    admin1: {dbf_records: 7,   matches_description: "Admin 1: 7 Province or Territory"}
+    admin2: {geometry_records: 160, dbf_records: 160, matches_description: "Admin 2: 160 District"}
+    admin3: {geometry_records: 577, dbf_records: 577, matches_description: "Admin 3: 577 Tehsil"}
+  karachi_content:
+    district_count: 6
+    pcode_names_area_sqkm:
+      PK702: {name: Central Karachi, area_sqkm: 65.14,   parts: 1, vertices: 262}
+      PK704: {name: East Karachi,    area_sqkm: 202.92,  parts: 1, vertices: 426}
+      PK712: {name: Korangi Karachi, area_sqkm: 104.29,  parts: 1, vertices: 221}
+      PK714: {name: Malir Karachi,   area_sqkm: 2726.86, parts: 12, vertices: 1224}
+      PK721: {name: South Karachi,   area_sqkm: 507.63,  parts: 2, vertices: 353}
+      PK729: {name: West Karachi,    area_sqkm: 241.77,  parts: 1, vertices: 328}
+    area_sum_published_sqkm: 3848.61
+    keamari_as_district: absent
+    keamari_found_as: "Kemari Town, pcode PK72101, an admin3 unit inside South Karachi, area 410.91 sqkm"
+    post_2023_names_present: {Gulshan: 0, Nazimabad: 0, Orangi: 0}
+    admin3_units_under_karachi: 18
+    admin3_tier_note: >
+      COD-AB admin3 for the Karachi area holds 18 Town units, which is a third distinct
+      tier: neither the 31 government subdivisions nor the 21 OSM level 7 towns.
+
+area_measurement_method:
+  formula: Chamberlain and Duquette geodesic polygon integral
+  sphere: WGS 84 authalic radius 6371007.180991944 m
+  ring_orientation_rule: clockwise ring treated as exterior, counter-clockwise as hole (ESRI Shapefile convention)
+  multipolygon_rule: exterior ring areas summed, hole areas subtracted
+  calibration_against_published_cod_ab_area_sqkm:
+    mean_absolute_error_percent: 0.210
+    max_absolute_error_percent: 0.212
+    verdict: method reproduces the source's own areas to about 0.2 percent
+  status: >
+    interim. Not a substitute for a proper projection pipeline. Authoritative metre-based
+    areas require pyproj/GDAL in EPSG:32642, which is still outstanding.
+
+validation_results:
+  superseded_by: M1.5 forensic validation, 2026-11-22. See GIS/reports/boundary-validation-m15.md
+  method_now: >
+    The interim hand-written integral below is superseded. M1.5 measured areas twice, with
+    pyproj geodesic area and with planar area after reprojection to EPSG:32642, which agree with
+    each other to within 0.051 percent on every unit and reproduce COD-AB published area
+    attributes to about 0.01 percent.
+  verified_m15:
+    seven_child_relations_present_and_resolved: true
+    missing_way_references: 0
+    missing_node_references: 0
+    missing_relation_references: 0
+    outer_way_components_per_relation: 1
+    open_rings: 0
+    osm_inner_roles_any_level: 0
+    geometry_is_valid_all_8: true
+    osm_division_area_geodesic_km2: 5839.94
+    osm_division_area_planar_32642_km2: 5841.13
+    osm_vs_reference_percent: +65.63
+    parent_child_symmetric_difference_km2: 0.000
+    parent_child_symmetric_difference_empty: true
+    utm42n_scale_factor_min: 0.99994
+    utm42n_scale_factor_max: 1.000211
+    utm42n_worst_linear_distortion_ppm: 211
+    utm42n_worst_linear_distortion_cm_per_km: 21
+    cod_ab_geodesic_reproduces_published_attr_percent: 0.01
+    district_areas_geodesic_km2:
+      Central: 63.97
+      East: 146.18
+      South: 116.03
+      West: 188.42
+      Keamari: 2514.09
+      Korangi: 114.44
+      Malir: 2696.81
+    district_vs_government_percent:
+      Central: -7.29
+      East: +5.16
+      South: -4.90
+      West: -49.08
+      Keamari: +349.75
+      Korangi: +5.96
+      Malir: +24.85
+    division_bbox_lonlat: [66.28623, 24.42735, 67.58278, 25.67680]
+    vertex_density_osm_division: 501
+    vertex_density_cod_ab_karachi_districts: 2814
+  outstanding_tests:
+    - osmium reference validation of the M2 PBF extract, after M2 extraction
+    - independent bathymetry or sea mask, not available and not substituted
+  completed_tests_m15:
+    - pairwise and parent-child geometric equivalence via symmetric_difference
+    - validity and self-intersection checks
+    - area in EPSG:32642 projected metres
+    - projected versus geodesic distance distortion
+    - rendered boundary comparison map
+
+extent_decomposition_m15:
+  method: >
+    OSM polygons intersected and differenced against COD-AB pak_admin1.shp Sindh and against the
+    union of the six COD-AB Karachi admin2 polygons, using shapely with pyproj geodesic areas.
+    No new dataset was required.
+  osm_division_total_km2: 5839.94
+  inside_cod_ab_sindh_km2: 3718.83
+  outside_cod_ab_sindh_km2: 2121.11
+  outside_bbox_lonlat: [66.2862, 24.4274, 67.4498, 25.6070]
+  excess_over_reference_km2: 2312.94
+  share_of_excess_outside_province_percent: 91.7
+  osm_vs_cod_khi_symmetric_difference_km2: 2513.22
+  osm_minus_cod_khi_km2: 2252.27
+  cod_khi_minus_osm_km2: 260.94
+  cod_khi_minus_osm_note: >
+    Karachi area inside COD-AB but outside the seven OSM districts. Must not be lost at sign-off.
+  per_district_outside_sindh_km2:
+    Central: 0.00
+    East: 0.00
+    South: 39.67
+    West: 0.00
+    Keamari: 2043.59
+    Korangi: 8.55
+    Malir: 29.30
+  per_district_inside_sindh_vs_government_percent:
+    Central: -7.3
+    East: +5.2
+    South: -37.4
+    West: -49.1
+    Keamari: -15.8
+    Korangi: -2.0
+    Malir: +23.5
+  causes_separated:
+    maritime_overclaim: "Keamari 2,043.59 + South 39.67 + Korangi 8.55 km2 of open sea"
+    inland_definition_difference: "Malir 160.46 km2 inside Sindh but outside COD-AB Karachi"
+    unexplained_land_deficit: "West 188.42 against published 370.00 km2 with zero offshore component"
+  disproven_hypotheses:
+    em_layers_are_maritime: "false, _em is uniformly smaller nationwide by 1317.61 km2"
+    cod_ab_sindh_is_a_land_mask: "false, Sindh bbox reaches 66.5961 E which is offshore"
+  cod_ab_partition_consistency_km2:
+    admin0: 876134.13
+    admin1: 876134.13
+    admin2: 876134.13
+    admin3: 876134.13
+  sindh_admin1_area_km2: 141028.20
+  sindh_admin1_published_attr_km2: 141028.29
+  sindh_admin1_parts: 34
+
+coastline_source:
+  selected: OSMData preprocessed OSM-derived land and water polygons
+  status: DOWNLOADED, checksum-verified, extracted, clipped and measured
+  deferred_because: gdal-bin absent, clipping needs ogr2ogr -clipsrc
+  land_polygons_split_4326:
+    url: https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip
+    bytes: 930863091
+    last_modified: 2026-11-22T01:49:50Z
+    http_status: 200
+  water_polygons_split_4326:
+    url: https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip
+    bytes: 908939540
+    last_modified: 2026-11-22T01:52:47Z
+    http_status: 200
+  unavailable_variants:
+    land-polygons-simple-4326.zip: 404
+    simplified-land-polygons-complete-4326.zip: 404
+  alternative_variants_available:
+    land-polygons-split-3857.zip: 954988788
+    land-polygons-complete-4326.zip: 925704470
+  licence: ODbL
+  target_directory: GIS/source/osmdata/
+  publisher_warnings_verbatim:
+    - Some errors in the OSM data are repaired.
+    - If the OSM data can't be repaired automatically, the data here will not be updated.
+  limitations:
+    - OSM-derived geometry, not an independent measurement of the actual shoreline
+    - can be silently stale where automatic repair fails
+    - OSM natural=coastline is understood to follow mean high water springs, so a mapped coastline
+      is not a legally surveyed or timeless property boundary
+    - broken coastline rings must not be closed by hand
+  natural_earth_status:
+    role: coarse 1:10,000,000 public-domain sanity check only, never the production shoreline
+    url: https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip
+    observed: HTTP 500 on HEAD and on three ranged GETs, 2704-byte HTML error body
+    site_root_observed: HTTP 200
+    licence: public domain, commercial use permitted, attribution optional
+
+west_orangi_and_coverage_m15:
+  west_town_decomposition:
+    osm_west_district_km2: 188.42
+    government_west_km2: 370.00
+    deficit_km2: -181.58
+    towns:
+      - {relation: 16347665, name: Orangi Town, osm_km2: 6.28, gov_subdivision: Orangi Town, gov_km2: 9.0, delta: -2.72}
+      - {relation: 16351170, name: Mominabad Town, osm_km2: 35.79, gov_subdivision: Mominabad, gov_km2: 19.0, delta: 16.79}
+      - {relation: 16351171, name: Manghopir Town, osm_km2: 146.35, gov_subdivision: Mango Pir, gov_km2: 342.0, delta: -195.65}
+    deltas_sum: -181.58
+    deltas_reconcile_to_deficit: true
+    district_vs_town_union_symmetric_difference_km2: 0.000000
+    manghopir_inside_osm_division: true
+    manghopir_inside_cod_ab_sindh: true
+    division_north_edge_lat: 25.6768
+    manghopir_north_edge_lat: 25.1046
+    sindh_land_adjacent_to_manghopir_outside_all_districts_km2: 20.57
+    conclusion: >
+      UNRESOLVED administrative reconciliation issue. A definitional difference in what the
+      government Mango Pir statistic covers is plausible but NOT proven. Neither vector dataset
+      supports 342 km2 (OSM Manghopir 146.35, COD-AB entire West district 241.77). Closing this
+      requires the underlying government boundary or notification identifying what territory the
+      342 km2 figure covers. No district boundary modified or proposed.
+  land_side_extent_agreement:
+    osm_division_whole_polygon_km2: 5839.94
+    osm_division_intersect_cod_ab_sindh_km2: 3718.83
+    whole_polygon_vs_reference_percent: +65.58
+    intersected_vs_reference_percent: +5.44
+    cod_ab_karachi_union_vs_reference_percent: +9.12
+    caveat: >
+      3,718.83 km2 is not a land area. It still contains harbour, creek and marsh water inside
+      Sindh, so the true terrestrial figure is lower and remains unmeasured.
+  uncovered_cod_ab_karachi_area:
+    total_km2: 260.94
+    inside_osm_division_km2: 0.00
+    by_district_km2: {Malir: 249.17, West: 5.95, South: 5.82, Central: 0.0, East: 0.0, Korangi: 0.0}
+    reconciles_with_union_symmetric_difference: true
+    meaning: OSM Karachi Division excludes about 249 km2 that COD-AB counts as Malir Karachi
+
+acceptance_tests_m15:
+  command: python3 Tools/osm_importer/test_boundary_m15.py
+  interpreter: system python3 with apt gdal, pyproj, shapely
+  exit_code: 0
+  total: 14
+  pass: 14
+  fail: 0
+  skip: 0
+  passed:
+    - seven districts present
+    - thirty-one subdivisions retained with areas summing to 3527.00
+    - zero missing OSM member references
+    - all geometries valid
+    - parent-child symmetric difference empty at 0.000000 km2
+    - extent decomposition consistent 3718.83 + 2121.11 = 5839.94
+    - COD-AB partition consistency across four levels
+    - geodesic versus EPSG:32642 agreement within 0.0511 percent
+    - land and water overlap measured at 0.0000 km2, not assumed
+    - conservation residual at most 0.000001 km2 per district
+    - land-only area present for all seven districts, sum 3674.23 km2
+    - land mask spatial probes for Saddar, open sea and Korangi coast
+    - uncovered COD-AB Karachi area lies outside the OSM division
+    - West district equals the union of its three mapped towns
+  skipped_blocked: []
+
+
+system_environment_verification:
+  date_utc: 2026-11-22
+  status: INSTALLED - owner ran the interactive apt install and supplied the transcript
+  earlier_agent_attempts: sudo -n true only proves non-interactive sudo is unavailable to the agent
+  installed_packages:
+    osmium-tool: 1.19.0-1build1
+    gdal-bin: 3.12.2+dfsg-1build2
+    python3-gdal: 3.12.2+dfsg-1build2
+    python3-pyproj: 3.7.2-2build1
+    python3-shapely: 2.1.2-1ubuntu2
+  library_versions:
+    gdal: 3.12.2 Chicoutimi released 2026-02-03
+    libosmium: 2.23.0
+    proj: 9.7.1
+    geos: 3.14.1
+    numpy_system: 2.3.5
+  install_footprint: {download_mb: 64.5, space_needed_mb: 239, packages_installed: 74}
+  venv_status: retained as instructed, not yet retired
+  source_integrity_reverified:
+    karachi-division-6080948.full.osm: OK
+    cod-ab-pak/pak_admin_boundaries.shp.zip: OK
+
+reproducibility_system_vs_venv:
+  method: >
+    dump_measurements.py exported 57 full-precision values from each interpreter and the JSON
+    dumps were diffed numerically. Matching test pass counts were deliberately not accepted
+    as proof of reproducibility.
+  keys_compared: 57
+  keys_identical: 57
+  max_absolute_difference: 0.0
+  max_relative_difference: 0.0
+  verdict: ALL VALUES BITWISE IDENTICAL
+  library_versions_differ:
+    shapely: "2.2.0 venv vs 2.1.2 system"
+    pyproj: "3.8.0 venv vs 3.7.2 system"
+    proj: "9.8.1 venv vs 9.7.1 system"
+    numpy: "2.5.5 venv vs 2.3.5 system"
+    geos: "3.14.1 in both"
+  suite_under_system_python: {total: 14, pass: 10, fail: 0, skip: 4, exit_code: 0}
+
+osmium_independent_verification:
+  command: osmium export -f geojson --geometry-types polygon -e -n
+  relations_compared: 8
+  parts_match: true
+  vertex_counts_match: true
+  bounds_match: true
+  max_geodesic_relative_difference: 0.0
+  max_symmetric_difference_km2: 0.0
+  osmium_geometry_errors: none
+  fileinfo_confirms:
+    nodes: 501
+    ways: 18
+    relations: 8
+    bbox_lonlat: [66.2862312, 24.4273517, 67.5827753, 25.676796]
+    objects_ordered: true
+  osm_payload_timestamps:
+    first: 2009-12-07T16:52:29Z
+    last: 2026-10-12T23:44:18Z
+    note: boundary geometry last edited about six weeks before this assessment
+  vertex_counts_by_relation:
+    "6080948": 501
+    "16347667": 170
+    "16349281": 180
+    "16350242": 181
+    "16350632": 124
+    "16350836": 116
+    "16351022": 317
+    "16351916": 485
+  conclusion: >
+    The custom ring assembler is corroborated by an independent implementation and no source
+    geometry was repaired. This closes the main residual risk on every area figure published so far.
+  tool_traps_recorded:
+    - osmium export has no osm_id attribute
+    - omitting --geometry-types polygon emits a LineString plus stray points, which can be
+      mistaken for a geometry defect rather than a flag error
+
+gdal_clip_benchmark:
+  script: Tools/osm_importer/benchmark_gdal_clip.py
+  results_file: GIS/validation/gdal_clip_benchmark.json
+  clip_box_lonlat: [66.20, 24.30, 67.70, 25.80]
+  clip_box_verified: ring area exactly 2.25 deg2, centroid 66.95 E 25.05 N
+  runs:
+    - {label: admin2 clipSrc to ext4, seconds: 0.178, features: 11, source_features: 160, area_deg2: 1.3533, out_kb: 97}
+    - {label: admin2 spatFilter to ext4, seconds: 0.140, features: 11, source_features: 160, area_deg2: 8.3838, out_kb: 235}
+    - {label: admin2 clipSrc to D 9p, seconds: 0.220, features: 11, source_features: 160, area_deg2: 1.3533, out_kb: 97}
+    - {label: admin3 clipSrc to ext4, seconds: 0.452, features: 33, source_features: 577, area_deg2: 1.3533, out_kb: 199}
+  findings:
+    - spatFilter and clipSrc return identical feature counts but 8.3838 against 1.3533 deg2, so a
+      row-count check cannot detect an uncut import
+    - the 9p penalty is workload dependent, 1.24x for this CPU-bound clip against 2.8x for bulk
+      file extraction, so the two figures must not be quoted interchangeably
+    - areas in this section are deliberately in deg2 and are not square kilometres
+  api_traps_recorded:
+    - "-quiet is --quiet"
+    - clipsrc is clipSrc
+    - spatialFilter is spatFilter
+    - osmium derive-tags does not exist in 1.19
+
+capacity_observation:
+  c_drive_free_gb_sequence: [25, 24, 23]
+  c_drive_used_percent: 91
+  wsl_directory_gb: 13
+  d_drive_free_gb: 133
+  requirement: >
+    re-measure C: immediately before the OSMData download rather than reusing any figure here
+
+coastline_processing_plan_m15:
+  status: EXECUTED, see land_water_classification
+  archives_reverified:
+    land_polygons_split_4326_bytes: 930863091
+    water_polygons_split_4326_bytes: 908939540
+    last_modified: 2026-11-22
+    compressed_total_bytes: 1839802631
+    compressed_total_gib: 1.71
+  measured_benchmarks:
+    reference_archive_compressed_bytes: 25496398
+    reference_archive_uncompressed_bytes: 40550468
+    reference_archive_entries: 60
+    compression_ratio: 1.59
+    throughput_d_9p_mbps: 24.5
+    throughput_wsl_ext4_mbps: 67.8
+    ext4_speedup_factor: 2.8
+  extrapolations_labelled:
+    uncompressed_total_gb: 2.93
+    extraction_seconds_on_ext4: 45
+    extraction_seconds_on_9p: 120
+    basis: single shapefile archive ratio, planning magnitudes not commitments
+  download_time_estimate: >
+    deliberately not given. Measuring it would require performing the download, which is not
+    authorised yet.
+  disk_constraint: >
+    D: has 133 GiB free. The WSL distro reports 945 GiB virtual but its backing store is on C:,
+    measured at 24 GB free and 91% used and trending downward, so a ~3 GB extraction is safe while
+    tens of gigabytes inside Linux is not. Extract in ext4, delete after clipping, and re-check
+    C: headroom immediately before the download.
+  clipping_decision: >
+    use ogr2ogr -clipsrc against a documented bounding box rather than -spat, because -spat would
+    import the entire uncut Asia landmass polygon. Clipping changes geometry, so areas must be
+    computed after clipping and the clip box recorded in the manifest.
+  acceptance_for_the_step: >
+    per district verify land + water + unclassified equals the administrative area within a stated
+    tolerance, instead of assuming the identity holds.
+  hard_rules:
+    - broken coastline rings must not be closed by hand
+    - source archives retained unchanged
+    - ODbL attribution retained
+    - no legal boundary claim from OSM-derived coastline
+
+land_water_classification:
+  method: pyproj geodesic on EPSG:4326 rings, EPSG:32642 planar as cross-check
+  division_admin_km2: 5839.94
+  division_land_km2: 3674.23
+  division_mapped_water_km2: 2165.71
+  division_overlap_km2: 0.0
+  division_unclassified_km2: 0.0
+  land_vs_reference_percent: +4.17
+  admin_vs_reference_percent: +65.58
+  per_district_land_km2:
+    Central: 63.97
+    East: 146.18
+    South: 85.25
+    West: 188.42
+    Keamari: 445.78
+    Korangi: 101.47
+    Malir: 2643.16
+  per_district_mapped_water_km2:
+    Central: 0.0
+    East: 0.0
+    South: 30.77
+    West: 0.0
+    Keamari: 2068.31
+    Korangi: 12.97
+    Malir: 53.66
+  keamari_wedge:
+    admin_km2: 2514.09
+    land_km2: 445.78
+    mapped_water_km2: 2068.31
+  conservation_note: >
+    unclassified is DEFINED as district area in neither layer, so the identity holds by
+    construction; the measured residual of at most 0.000001 km2 validates arithmetic and
+    implementation, not geographic correctness
+  water_class_note: >
+    OSMData water_polygons includes marine polygons. Areas are reported as mapped water and never
+    as measured ocean. This is OSM-derived coastline, not an independent survey, and OSM
+    natural=coastline is understood to follow mean high water springs
+  geometry_quality_clipped:
+    land_polygons: 93
+    water_polygons: 1
+    empty: 0
+    invalid_before_repair: 0
+    invalid_after_repair: 0
+    duplicates: 0
+    overlapping_pairs: 0
+  clipping_cost_note: >
+    land clipped 97 features in 2.42 s while water clipped 5 features in 103.55 s, so runtime
+    follows vertex count and must not be estimated from feature counts
+  storage_peak:
+    c_free_gb_min: 20.242
+    c_free_gb_after_cleanup: 23.004
+    tmp_verified_empty: true
+    archives_reverified_after_processing: true
+
+risks:
+  - >
+    An OSM division polygon 65.63 percent larger than the administrative reference would
+    clip a game world containing roughly 2,300 square kilometres of area that is not
+    Karachi, dominated by the Keamari sea boundary.
+  - >
+    Neither candidate reproduces the 3,527 square kilometre reference, so the reference
+    cannot be used as a pass criterion until the maritime question is resolved.
+  - >
+    COD-AB is legally permissive but administratively stale. It has no Keamari district
+    and it predates the 2023 renaming.
+  - >
+    No Pakistani government body investigated publishes downloadable boundary polygons.

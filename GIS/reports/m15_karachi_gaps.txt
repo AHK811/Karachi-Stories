@@ -1,0 +1,24 @@
+=== A. area COD-AB claims for Karachi that the OSM seven districts do not cover ===
+  Central  COD-AB=    65.14  not covered by OSM=    0.00 km2 (  0.0%)  of which inside OSM division=    0.00
+  East     COD-AB=   202.92  not covered by OSM=    0.00 km2 (  0.0%)  of which inside OSM division=    0.00
+  South    COD-AB=   507.62  not covered by OSM=    5.82 km2 (  1.1%)  of which inside OSM division=    0.00
+  West     COD-AB=   241.77  not covered by OSM=    5.95 km2 (  2.5%)  of which inside OSM division=    0.00
+  Korangi  COD-AB=   104.29  not covered by OSM=    0.00 km2 (  0.0%)  of which inside OSM division=    0.00
+  Malir    COD-AB=  2726.86  not covered by OSM=  249.17 km2 (  9.1%)  of which inside OSM division=    0.00
+  sum of COD-AB Karachi area not covered by OSM districts: 260.94 km2
+  union-based symmetric-difference figure was 260.94 km2; per-district sum is 260.94 km2
+
+=== B. OSM Manghopir Town against the government 342 km2 figure ===
+  OSM Manghopir Town        :    146.35 km2
+  government 'Mango Pir'    :    342.00 km2
+  deficit                   :   -195.65 km2
+  Manghopir bbox            : [66.9401, 24.9569, 67.1187, 25.1046]
+  inside OSM division?      : True
+  inside COD-AB Sindh?      : True
+  division north edge       : 25.6768   Manghopir north edge: 25.1046
+  Sindh land adjacent to Manghopir not in any OSM Karachi district: 20.57 km2
+
+=== C. is the government 3,527 km2 reachable from either dataset on land? ===
+  OSM division                  5839.94 km2   vs 3,527 ->  +65.58%
+  COD-AB Karachi union          3848.61 km2   vs 3,527 ->   +9.12%
+  OSM division inside Sindh     3718.83 km2   vs 3,527 ->   +5.44%

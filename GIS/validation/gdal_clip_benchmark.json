@@ -1,0 +1,53 @@
+{
+ "gdal_version": "GDAL 3.12.2 \"Chicoutimi\", released 2026/02/03",
+ "osmium_version": null,
+ "clip_box_lonlat": [
+  66.2,
+  24.3,
+  67.7,
+  25.8
+ ],
+ "clip_wkt": "POLYGON((66.2000 24.3000, 67.7000 24.3000, 67.7000 25.8000, 66.2000 25.8000, 66.2000 24.3000))",
+ "runs": [
+  {
+   "label": "admin2 -clipsrc WKT to ext4",
+   "seconds": 0.178,
+   "features": 11,
+   "source_features": 160,
+   "area_deg2": 1.3533,
+   "source_area_deg2": 82.0277,
+   "geometry_type": "Polygon",
+   "output_bytes": 99414
+  },
+  {
+   "label": "admin2 -spat bbox only to ext4",
+   "seconds": 0.14,
+   "features": 11,
+   "source_features": 160,
+   "area_deg2": 8.3838,
+   "source_area_deg2": 82.0277,
+   "geometry_type": "Polygon",
+   "output_bytes": 240534
+  },
+  {
+   "label": "admin2 -clipsrc WKT to D: (9p)",
+   "seconds": 0.22,
+   "features": 11,
+   "source_features": 160,
+   "area_deg2": 1.3533,
+   "source_area_deg2": 82.0277,
+   "geometry_type": "Polygon",
+   "output_bytes": 99414
+  },
+  {
+   "label": "admin3 -clipsrc WKT to ext4",
+   "seconds": 0.452,
+   "features": 33,
+   "source_features": 577,
+   "area_deg2": 1.3533,
+   "source_area_deg2": 82.0277,
+   "geometry_type": "Polygon",
+   "output_bytes": 203580
+  }
+ ]
+}

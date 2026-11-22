@@ -1,0 +1,72 @@
+layer: L4_game_environment
+status: schema definition only, no game geometry generated in M1.6
+purpose: contract that M2 output must satisfy so the canonical GIS layers can be consumed without reinterpreting them
+governing_decisions: [D-002 1:1 scale, D-016 four-layer architecture, D-034 land and water measured]
+
+units:
+  horizontal: metre
+  vertical: metre above vertical_origin_m
+  time: second
+  angle: degree, clockwise from north where used
+coordinate_contract:
+  storage_crs: EPSG:4326
+  working_crs: EPSG:32642
+  world_scale: 1 projected metre = 1 Godot unit
+  axis_rule: north maps toward negative Godot Z
+  origin:
+    E0: UNSET - frozen in M2 and recorded in every chunk manifest
+    N0: UNSET - frozen in M2 and recorded in every chunk manifest
+    vertical_origin_m: UNSET - no elevation source licensed yet
+  floating_origin: controlled rebasing only, global coordinates kept separate from local scene coordinates
+
+chunk_grid:
+  size_m: 512
+  comparison_size_m: 256
+  status: to be benchmarked in M4, not assumed
+  indexing: chunk_x = floor((E - E0) / size), chunk_z = floor((N0 - N) / size)
+
+required_layers:
+  terrain_base:
+    source: L2 terrestrial mask intersected with L1
+    geometry: triangulated or grid mesh per chunk
+    collision: required, simplified proxy not render mesh
+    water_behaviour: no ground collision where L3 covers the cell
+  roads:
+    source: OSM highway features, obtained in M2
+    required_fields: [osm_way_id, source_layers, width_m, width_source, surface, oneway, bridge, tunnel, layer]
+    width_source_enum: [osm_tag, derived_from_lanes, estimated_by_class]
+    rule: gameplay speed limits are never presented as OSM facts
+  buildings:
+    source: OSM building and building:part footprints, obtained in M2
+    required_fields: [osm_way_id, height_m, height_source, levels, roof, chunk_membership]
+    height_source_enum: [osm_tag, derived_from_levels, estimated_by_type]
+    cross_chunk_rule: bounding-box index, a building must not vanish across a chunk edge
+  water_surface:
+    source: L3 mapped water
+    semantics: authored water surface, not a bathymetric model
+    gameplay: drivable=false, boat physics deferred
+  navigation_graph:
+    source: road centrelines from M2
+    required_fields: [node_id, from, to, road_osm_way_id, length_m, oneway]
+    rule: connectivity must survive chunk clipping at boundaries
+  props_and_street_furniture:
+    source: original authored assets
+    rule: no unlicensed or ripped assets, provenance recorded per asset family
+  streaming_manifest:
+    required_fields: [schema_version, compiler_version, source_data_date, source_file_hashes,
+                      boundary_dataset_version, crs, units, origin_E0_N0, chunk_coords,
+                      feature_counts_by_layer, geometry_counts, provenance_flags, validation_status]
+
+provenance_flags:
+  observed: value present in the source dataset
+  derived: computed from source by a documented rule
+  estimated: fallback assumption, must never be presented as ground truth
+  authored: creative content with no real-world claim
+
+acceptance_contract_for_M2_output:
+  - every feature carries osm element type and id where derived from OSM
+  - every derived or estimated value names its rule or config key
+  - no chunk references a layer whose CRS differs from EPSG:32642 metres
+  - administrative L1 extent is never used to truncate terrain generation
+  - land versus water classification decides drivability, not chunk trimming
+  - unresolved administrative discrepancies must not become game-world facts

@@ -1,0 +1,185 @@
+{
+ "crs": {
+  "game_world_mapping": "game_x = easting_m - E0; game_z = N0 - northing_m; 1 metre = 1 Godot unit",
+  "measurement_cross_check": "planar area after reprojection to EPSG:32642",
+  "measurement_primary": "pyproj Geod(ellps=WGS84).geometry_area_perimeter on stored 4326 rings",
+  "projection_fit": "measured UTM zone 42N scale factor 0.99994 to 1.000211 across Karachi, worst case about +211 ppm or 21 cm per km",
+  "storage": "EPSG:4326 (WGS 84 longitude/latitude, GeoJSON CRS8)",
+  "world_origin": "NOT YET FROZEN - E0 and N0 are set in M2 and must be recorded in the chunk manifest"
+ },
+ "dataset": "Karachi: Street Stories canonical GIS dataset",
+ "frozen_utc": "2026-11-22",
+ "layers": {
+  "L1_administrative": {
+   "extent_policy": "full administrative extent preserved including maritime area",
+   "features": {
+    "districts": 7,
+    "division": 1
+   },
+   "files": [
+    "layers/l1_admin_karachi_division.geojson",
+    "layers/l1_admin_districts.geojson"
+   ],
+   "licence": "ODbL 1.0",
+   "modification": "none; geometry reproduced from source without simplification",
+   "source": "OpenStreetMap relations, assembled by osmium 1.19.0 / libosmium 2.23.0"
+  },
+  "L2_terrestrial_mask": {
+   "caveats": [
+    "OSM-derived coastline, not an independent survey",
+    "mean high water springs convention",
+    "publisher warns automatic repair is not guaranteed"
+   ],
+   "features": 97,
+   "files": [
+    "layers/l2_land_mask_karachi.geojson"
+   ],
+   "licence": "ODbL 1.0",
+   "source": "OSMData land-polygons-split-4326.zip clipped with GDAL clipSrc"
+  },
+  "L3_mapped_water": {
+   "caveats": [
+    "includes marine polygons",
+    "must not be reported as measured ocean",
+    "OSM-derived, not an independent survey"
+   ],
+   "features": 5,
+   "files": [
+    "layers/l3_water_mask_karachi.geojson"
+   ],
+   "licence": "ODbL 1.0",
+   "source": "OSMData water-polygons-split-4326.zip clipped with GDAL clipSrc"
+  },
+  "L4_game_environment": {
+   "files": [
+    "metadata/l4_schema.yml"
+   ],
+   "status": "schema defined only; no game geometry generated in M1.6"
+  }
+ },
+ "mask_consumption_rule": "all land and water arithmetic uses the union of each layer, never a sum of features, because grid tiles deliberately overlap",
+ "milestone": "M1.6",
+ "open_issues": [
+  "West/Manghopir government-area basis",
+  "Malir government-area and COD-AB coverage",
+  "non-equivalent government-versus-land comparisons",
+  "OSMData coastline and marine classification limits"
+ ],
+ "provenance": {
+  "administrative_reference": "Commissioner Office Karachi area-maps page: 3,527 km2, 7 districts, 31 subdivisions",
+  "attribution_required_in_game_and_docs": [
+   "(c) OpenStreetMap contributors (ODbL)",
+   "Pakistan admin boundaries: OCHA FISS / HDX, CC BY-IGO"
+  ],
+  "osm_boundary_payload_timestamp_range": [
+   "2009-12-07T16:52:29Z",
+   "2026-10-12T23:44:18Z"
+  ],
+  "osmdata_copyright": "Copyright 2026 OpenStreetMap contributors, available under the Open Database License (ODbL)",
+  "osmdata_copyright_url": "https://www.openstreetmap.org/copyright",
+  "osmdata_data_vintage": "2026-11-21T16:00:00Z (stated in both archive README.txt files)",
+  "osmdata_grid_note": "split into a grid with slight overlap - see KNOWN_LIMITATIONS L-18",
+  "osmdata_product_pages": [
+   "https://osmdata.openstreetmap.de/data/land-polygons.html",
+   "https://osmdata.openstreetmap.de/data/water-polygons.html"
+  ],
+  "osmdata_publisher_warnings_verbatim": [
+   "Some errors in the OSM data are repaired.",
+   "If the OSM data can't be repaired automatically, the data here will not be updated."
+  ],
+  "secondary_validation_source": "OCHA/HDX COD-AB PAK v01, CC BY-IGO, boundaries created 2022-09-02, reviewed 2024-09-27",
+  "source_layer_declared_stats": {
+   "land_polygons": {
+    "crs": "EPSG:4326",
+    "extent": [
+     -180.0,
+     -90.0,
+     180.0,
+     83.665
+    ],
+    "features": 876241
+   },
+   "water_polygons": {
+    "crs": "EPSG:4326",
+    "extent": [
+     -180.0,
+     -78.739,
+     180.0,
+     90.0
+    ],
+    "features": 53330,
+    "product_description": "coastline water polygons"
+   }
+  }
+ },
+ "rebuild": "see README.md; build_canonical_m16.py --full reproduces every layer from the retained archives",
+ "reference_measurements_km2": {
+  "comparison_note": "government district areas are not stated as land-only, so land-versus-government comparisons are indicative and non-equivalent where land status is unknown",
+  "districts": {
+   "Central": {
+    "administrative": 63.97,
+    "land": 63.97,
+    "mapped_water": 0.0
+   },
+   "East": {
+    "administrative": 146.18,
+    "land": 146.18,
+    "mapped_water": 0.0
+   },
+   "Keamari": {
+    "administrative": 2514.09,
+    "land": 445.78,
+    "mapped_water": 2068.31
+   },
+   "Korangi": {
+    "administrative": 114.44,
+    "land": 101.47,
+    "mapped_water": 12.97
+   },
+   "Malir": {
+    "administrative": 2696.81,
+    "land": 2643.16,
+    "mapped_water": 53.66
+   },
+   "South": {
+    "administrative": 116.03,
+    "land": 85.25,
+    "mapped_water": 30.77
+   },
+   "West": {
+    "administrative": 188.42,
+    "land": 188.42,
+    "mapped_water": 0.0
+   }
+  },
+  "division": {
+   "administrative": 5839.94,
+   "land": 3674.23,
+   "mapped_water": 2165.71,
+   "overlap": 0.0,
+   "unclassified": 0.0
+  },
+  "government_reference_km2": {
+   "Central": 69,
+   "East": 139,
+   "Keamari": 559,
+   "Korangi": 108,
+   "Malir": 2160,
+   "South": 122,
+   "West": 370,
+   "division": 3527
+  },
+  "method": "pyproj geodesic on EPSG:4326 rings"
+ },
+ "source_archives_sha256": {
+  "land-polygons-split-4326.zip": "e43bb195ee646f27edcf38c2a50ce14ae39e0ab64e7ef9964b430dad1e605c6d",
+  "pak_admin_boundaries.shp.zip": "04e634d5bd7f1a93d81ae993d6341daa4ed350741fe94eee9e9dce9958a46c86",
+  "water-polygons-split-4326.zip": "e541274f78a83564f19db62f4aad3258a43d15041659b825e7b7d61ac83fdd9b"
+ },
+ "status": "frozen provisional canonical dataset; not an authoritative cadastral or government boundary dataset",
+ "tolerance": {
+  "area_km2_absolute": 0.05,
+  "conservation_residual_km2": 0.01
+ },
+ "version": "1.0.0"
+}

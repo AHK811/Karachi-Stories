@@ -1,0 +1,330 @@
+[
+ {
+  "id": "6080948",
+  "label": "Karachi Division",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 501,
+   "geod": 5839.94016303599,
+   "planar": 5841.130509485267,
+   "valid": true,
+   "bounds": [
+    66.286231,
+    24.427352,
+    67.582775,
+    25.676796
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 501,
+   "geod": 5839.94016303599,
+   "planar": 5841.130509485273,
+   "valid": true,
+   "bounds": [
+    66.286231,
+    24.427352,
+    67.582775,
+    25.676796
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16347667",
+  "label": "Orangi (West)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 170,
+   "geod": 188.41786108339744,
+   "planar": 188.4533482095269,
+   "valid": true,
+   "bounds": [
+    66.940063,
+    24.913116,
+    67.118742,
+    25.104579
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 170,
+   "geod": 188.41786108339744,
+   "planar": 188.4533482095268,
+   "valid": true,
+   "bounds": [
+    66.940063,
+    24.913116,
+    67.118742,
+    25.104579
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16349281",
+  "label": "Nazimabad (Central)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 180,
+   "geod": 63.97296661754466,
+   "planar": 63.98251201482382,
+   "valid": true,
+   "bounds": [
+    67.01359,
+    24.888522,
+    67.093353,
+    25.008016
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 180,
+   "geod": 63.97296661754466,
+   "planar": 63.98251201482383,
+   "valid": true,
+   "bounds": [
+    67.01359,
+    24.888522,
+    67.093353,
+    25.008016
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16350242",
+  "label": "Gulshan (East)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 181,
+   "geod": 146.17921718163566,
+   "planar": 146.19312855477253,
+   "valid": true,
+   "bounds": [
+    67.020893,
+    24.850296,
+    67.188841,
+    25.011665
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 181,
+   "geod": 146.17921718163566,
+   "planar": 146.19312855477258,
+   "valid": true,
+   "bounds": [
+    67.020893,
+    24.850296,
+    67.188841,
+    25.011665
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16350632",
+  "label": "Korangi (Korangi)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 124,
+   "geod": 114.4419350665524,
+   "planar": 114.45031535927357,
+   "valid": true,
+   "bounds": [
+    67.073904,
+    24.758177,
+    67.219613,
+    24.887213
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 124,
+   "geod": 114.4419350665524,
+   "planar": 114.45031535927353,
+   "valid": true,
+   "bounds": [
+    67.073904,
+    24.758177,
+    67.219613,
+    24.887213
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16350836",
+  "label": "Karachi (South)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 116,
+   "geod": 116.02636165890073,
+   "planar": 116.04540893038931,
+   "valid": true,
+   "bounds": [
+    66.975597,
+    24.723511,
+    67.112689,
+    24.883812
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 116,
+   "geod": 116.02636165890073,
+   "planar": 116.04540893038927,
+   "valid": true,
+   "bounds": [
+    66.975597,
+    24.723511,
+    67.112689,
+    24.883812
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16351022",
+  "label": "Keamari (Keamari)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 317,
+   "geod": 2514.089852826512,
+   "planar": 2515.374719601956,
+   "valid": true,
+   "bounds": [
+    66.286231,
+    24.427352,
+    67.070358,
+    25.024224
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 317,
+   "geod": 2514.089852826512,
+   "planar": 2515.3747196019544,
+   "valid": true,
+   "bounds": [
+    66.286231,
+    24.427352,
+    67.070358,
+    25.024224
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ },
+ {
+  "id": "16351916",
+  "label": "Malir (Malir)",
+  "status": "OK",
+  "mine": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 485,
+   "geod": 2696.8119686014466,
+   "planar": 2696.63107681452,
+   "valid": true,
+   "bounds": [
+    67.017551,
+    24.761929,
+    67.582775,
+    25.676796
+   ]
+  },
+  "osmium": {
+   "parts": 1,
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "vertices": 485,
+   "geod": 2696.8119686014466,
+   "planar": 2696.631076814521,
+   "valid": true,
+   "bounds": [
+    67.017551,
+    24.761929,
+    67.582775,
+    25.676796
+   ]
+  },
+  "geodesic_rel_diff": 0.0,
+  "symmetric_difference_km2": 0,
+  "osmium_geometry_errors": "none",
+  "vertices_match": true,
+  "parts_match": true,
+  "bounds_match": true
+ }
+]

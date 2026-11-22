@@ -1,0 +1,37 @@
+=== A. OSM Karachi Division against COD-AB Sindh province extent ===
+  OSM division total   :   5,839.94 km2
+  inside COD-AB Sindh  :   3,718.83 km2
+  OUTSIDE COD-AB Sindh :   2,121.11 km2
+  outside bbox         : [66.2862, 24.4274, 67.4498, 25.607]
+
+=== B. per district: OSM area split by COD-AB Sindh and by COD-AB Karachi union ===
+  district        OSM   inSindh  outSindh  inCOD-KHI  outCOD-KHI     gov
+  Central       63.97     63.97      0.00      63.97        0.00      69
+  East         146.18    146.18      0.00     146.18        0.00     139
+  South        116.03     76.36     39.67      76.36       39.67     122
+  West         188.42    188.42      0.00     188.42        0.00     370
+  Keamari    2,514.09    470.50  2,043.59     470.50    2,043.59     559
+  Korangi      114.44    105.89      8.55     105.89        8.55     108
+  Malir      2,696.81  2,667.51     29.30   2,536.35      160.46   2,160
+
+=== C. is COD-AB Sindh itself land-only? ===
+  Sindh admin1 area : 141,028.20 km2 (published attr 141,028.29)
+  Sindh admin1 bbox : [66.5961, 23.6947, 71.1244, 28.485]
+  parts             : 34
+  Sindh bbox west edge lon 66.5961 vs Karachi coastline near 66.9-67.1E
+
+=== D. OSM division vs COD-AB Karachi union ===
+  symmetric difference : 2,513.22 km2
+  OSM minus COD-KHI    : 2,252.27 km2
+  COD-KHI minus OSM    : 260.94 km2
+
+=== E. COD-AB internal partition consistency ===
+  sum(admin0) =   876,134.13 km2
+  sum(admin1) =   876,134.13 km2
+  sum(admin2) =   876,134.13 km2
+  sum(admin3) =   876,134.13 km2
+
+=== F. does Sindh contain the sea OSM Keamari claims? ===
+  OSM Keamari inside Sindh :     470.50 km2  (-15.8% of gov 559)
+  OSM Keamari outside Sindh:   2,043.59 km2
+  => area Sindh itself claims as Karachi sea but OSM Keamari does not: 260.94 km2

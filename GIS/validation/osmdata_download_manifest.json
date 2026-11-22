@@ -1,0 +1,33 @@
+{
+ "started_utc": "2026-11-22T09:29:08Z",
+ "finished_utc": "2026-11-22T09:39:47Z",
+ "failures": 0,
+ "licence": "ODbL",
+ "source_service": "osmdata.openstreetmap.de",
+ "downloads": [
+  {
+   "file": "land-polygons-split-4326.zip",
+   "url": "https://osmdata.openstreetmap.de/download/land-polygons-split-4326.zip",
+   "expected_bytes": 930863091,
+   "actual_bytes": 930863091,
+   "sha256": "e43bb195ee646f27edcf38c2a50ce14ae39e0ab64e7ef9964b430dad1e605c6d",
+   "seconds": 291,
+   "size_matches": true,
+   "throughput_mbps": 3.2
+  },
+  {
+   "file": "water-polygons-split-4326.zip",
+   "url": "https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip",
+   "expected_bytes": 908939540,
+   "actual_bytes": 908939540,
+   "sha256": "e541274f78a83564f19db62f4aad3258a43d15041659b825e7b7d61ac83fdd9b",
+   "seconds": 294,
+   "size_matches": true,
+   "throughput_mbps": 3.09
+  }
+ ],
+ "publisher_warnings": [
+  "Some errors in the OSM data are repaired.",
+  "If the OSM data can't be repaired automatically, the data here will not be updated."
+ ]
+}

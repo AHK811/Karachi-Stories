@@ -1,0 +1,31 @@
+OSM Orangi (official West) references 3 town relations
+  relation/16347665 L7 Orangi Town        geodesic=    6.28 km2  planar=    6.28  rings=1 parts=1 valid=True
+  relation/16351170 L7 Mominabad Town     geodesic=   35.79 km2  planar=   35.80  rings=1 parts=1 valid=True
+  relation/16351171 L7 Manghopir Town     geodesic=  146.35 km2  planar=  146.37  rings=1 parts=1 valid=True
+
+=== government West subdivisions vs OSM Orangi towns ===
+  subdivision     gov km2   matched OSM town      osm km2    delta
+  Orangi Town         9.0   Orangi Town              6.28    -2.72
+  Mominabad          19.0   Mominabad Town          35.79   +16.79
+  Mango Pir         342.0   ?                         nan     +nan
+  SUM               370.0   OSM town sum           188.42  -181.58
+
+=== does the union of OSM towns equal the OSM district polygon? ===
+  district area=188.42  town union=188.42  symdiff=0.0000 km2  empty=True
+
+=== where is the missing West area? COD-AB West minus OSM Orangi ===
+  COD-AB West area            : 241.77 km2
+  OSM Orangi area             : 188.42 km2
+  in COD-AB West, NOT in OSM  : 56.73 km2  bbox=[66.9286, 24.8765, 67.1205, 25.0978]
+  in OSM Orangi, NOT COD-AB   : 3.38 km2  bbox=[66.9401, 24.9503, 67.1187, 25.1046]
+
+=== which OSM district owns the area COD-AB calls West? ===
+  part   45.64 km2 at (66.9542,24.9246) inside OSM district(s): ['Keamari']
+  part    5.95 km2 at (66.9727,25.0583) inside OSM district(s): NONE - outside all 7
+  part    4.37 km2 at (67.0858,25.0616) inside OSM district(s): ['Malir']
+  part    0.30 km2 at (67.0404,25.0938) inside OSM district(s): ['Malir']
+  part    0.16 km2 at (67.0484,24.9859) inside OSM district(s): ['Central']
+  part    0.09 km2 at (66.9558,25.0031) inside OSM district(s): ['Keamari']
+  part    0.08 km2 at (67.1128,25.0263) inside OSM district(s): ['Malir']
+  part    0.08 km2 at (67.0461,25.0006) inside OSM district(s): ['Central']
+  division contains all of COD-AB West? False

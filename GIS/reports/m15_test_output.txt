@@ -1,0 +1,19 @@
+# M1.5 acceptance test run 2026-11-22T08:26:04Z (14 tests)
+# shapely 2.2.0 / pyproj 3.8.0 (PROJ 9.8.1) / python 3.14.4 / venv on D:
+01 seven districts present                                             PASS  districts=7 names=['Central', 'East', 'Keamari', 'Korangi', 'Malir', 'South', 'West']
+02 thirty-one subdivisions retained in metadata                        PASS  subdivisions=31 area_sum=3527.00
+03 no missing OSM member references                                    PASS  missing=0 []
+04 valid geometries                                                    PASS  invalid=[]
+05 parent/district symmetric difference empty                          PASS  empty=True area=0.000000 km2
+06 division extent decomposed against provincial boundary              PASS  total=5,839.94 inside_sindh=3,718.83 outside_sindh=2,121.11
+07 COD-AB hierarchy partitions consistently at every level             PASS  admin0..3 sums=[876134.13, 876134.13, 876134.13, 876134.13]
+08 geodesic vs EPSG:32642 planar consistency                           PASS  max relative difference=0.0511%
+13 COD-AB Karachi area uncovered by OSM lies outside the OSM division  PASS  per-district (uncovered, inside_division)={'Central': (0, 0), 'East': (0, 0), 'Korangi': (0, 0), 'Malir': (249.17, 0.0), 'South': (5.82, 0), 'West': (5.95, 0)}
+14 West district equals the union of its three mapped towns            PASS  symdiff=0.000000 km2 towns=[6.28, 35.79, 146.35]
+09 land and water overlap                                              SKIP  BLOCKED: no land/water mask available yet
+10 unclassified area                                                   SKIP  BLOCKED: no land/water mask available yet
+11 land-only area by district                                          SKIP  BLOCKED: needs OSMData land polygons
+12 land and water spatial coverage                                     SKIP  BLOCKED: needs OSMData land and water polygons
+
+TOTAL 14  PASS 10  FAIL 0  SKIP 4
+exit_code=0

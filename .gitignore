@@ -1,0 +1,73 @@
+# --- Godot editor cache and local state ---
+.godot/
+*.translation
+*.tmp
+.cache/
+
+# --- Raw and derived GIS data: large, separately licensed, never in Git ---
+GIS/source/
+GIS/interim/
+GIS/processed/
+GIS/elevation/
+GIS/reports/*.tif
+*.osm.pbf
+*.pbf
+*.gpkg
+*.gpkg-shm
+*.gpkg-wal
+*.sqlite
+*.geopackage
+*.hgt
+*.dem
+*.tif
+*.tiff
+*.laz
+*.las
+*.shp
+*.shx
+*.dbf
+*.prj
+*.qgz
+
+# --- Generated world geometry: reproducible from compiler output ---
+generated/
+*.glb
+*.gltf
+*.obj
+*.fbx
+
+# --- Python ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# --- Secrets and machine-local configuration ---
+.env
+.env.local
+*.env.local
+*.key
+*.pem
+*.p12
+credentials*.json
+service-account*.json
+token*.json
+
+# --- OS and editor noise ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- local toolchain virtualenv (218 MB, never commit) ---
+.venv-gis/
+venv-gis/

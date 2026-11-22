@@ -1,0 +1,274 @@
+{
+ "division": {
+  "meta": {
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_outer": 0,
+   "open_inner": 0,
+   "parts": 1
+  },
+  "valid": true,
+  "reason": null,
+  "geodesic_km2": 5839.94,
+  "planar_32642_km2": 5841.13
+ },
+ "symdiff_division_vs_districtunion_km2": 0.0,
+ "symdiff_empty": true,
+ "symdiff_parts": [],
+ "districts": [
+  {
+   "official": "Central",
+   "osm_alias": "Nazimabad",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 63.97,
+   "planar_km2": 63.98,
+   "gov_km2": 69.0,
+   "geo_vs_gov_pct": -7.29,
+   "planar_vs_geodesic_pct": 0.015
+  },
+  {
+   "official": "East",
+   "osm_alias": "Gulshan",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 146.18,
+   "planar_km2": 146.19,
+   "gov_km2": 139.0,
+   "geo_vs_gov_pct": 5.16,
+   "planar_vs_geodesic_pct": 0.01
+  },
+  {
+   "official": "South",
+   "osm_alias": "Karachi",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 116.03,
+   "planar_km2": 116.05,
+   "gov_km2": 122.0,
+   "geo_vs_gov_pct": -4.9,
+   "planar_vs_geodesic_pct": 0.016
+  },
+  {
+   "official": "West",
+   "osm_alias": "Orangi",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 188.42,
+   "planar_km2": 188.45,
+   "gov_km2": 370.0,
+   "geo_vs_gov_pct": -49.08,
+   "planar_vs_geodesic_pct": 0.019
+  },
+  {
+   "official": "Keamari",
+   "osm_alias": "Keamari",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 2514.09,
+   "planar_km2": 2515.37,
+   "gov_km2": 559.0,
+   "geo_vs_gov_pct": 349.75,
+   "planar_vs_geodesic_pct": 0.051
+  },
+  {
+   "official": "Korangi",
+   "osm_alias": "Korangi",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 114.44,
+   "planar_km2": 114.45,
+   "gov_km2": 108.0,
+   "geo_vs_gov_pct": 5.96,
+   "planar_vs_geodesic_pct": 0.007
+  },
+  {
+   "official": "Malir",
+   "osm_alias": "Malir",
+   "outer_rings": 1,
+   "inner_rings": 0,
+   "open_rings": 0,
+   "parts": 1,
+   "valid": true,
+   "geodesic_km2": 2696.81,
+   "planar_km2": 2696.63,
+   "gov_km2": 2160.0,
+   "geo_vs_gov_pct": 24.85,
+   "planar_vs_geodesic_pct": -0.007
+  }
+ ],
+ "cod_ab": [
+  {
+   "pcode": "PK702",
+   "name": "Central Karachi",
+   "official": "Central",
+   "published_attr_km2": 65.14,
+   "geodesic_km2": 65.14,
+   "planar_km2": 65.15,
+   "valid": true,
+   "parts": 1
+  },
+  {
+   "pcode": "PK704",
+   "name": "East Karachi",
+   "official": "East",
+   "published_attr_km2": 202.92,
+   "geodesic_km2": 202.92,
+   "planar_km2": 202.94,
+   "valid": true,
+   "parts": 1
+  },
+  {
+   "pcode": "PK712",
+   "name": "Korangi Karachi",
+   "official": "Korangi",
+   "published_attr_km2": 104.29,
+   "geodesic_km2": 104.29,
+   "planar_km2": 104.3,
+   "valid": true,
+   "parts": 1
+  },
+  {
+   "pcode": "PK714",
+   "name": "Malir Karachi",
+   "official": "Malir",
+   "published_attr_km2": 2726.86,
+   "geodesic_km2": 2726.86,
+   "planar_km2": 2726.7,
+   "valid": true,
+   "parts": 12
+  },
+  {
+   "pcode": "PK721",
+   "name": "South Karachi",
+   "official": "South",
+   "published_attr_km2": 507.63,
+   "geodesic_km2": 507.62,
+   "planar_km2": 507.8,
+   "valid": true,
+   "parts": 2
+  },
+  {
+   "pcode": "PK729",
+   "name": "West Karachi",
+   "official": "West",
+   "published_attr_km2": 241.77,
+   "geodesic_km2": 241.77,
+   "planar_km2": 241.81,
+   "valid": true,
+   "parts": 1
+  }
+ ],
+ "scale_factors": [
+  {
+   "lon": 66.98,
+   "lat": 24.86,
+   "dir": "NS",
+   "k": 1.000114
+  },
+  {
+   "lon": 66.98,
+   "lat": 24.86,
+   "dir": "EW",
+   "k": 1.000112
+  },
+  {
+   "lon": 67.01,
+   "lat": 24.86,
+   "dir": "NS",
+   "k": 1.000099
+  },
+  {
+   "lon": 67.01,
+   "lat": 24.86,
+   "dir": "EW",
+   "k": 1.000097
+  },
+  {
+   "lon": 67.2,
+   "lat": 24.9,
+   "dir": "NS",
+   "k": 1.000008
+  },
+  {
+   "lon": 67.2,
+   "lat": 24.9,
+   "dir": "EW",
+   "k": 1.000006
+  },
+  {
+   "lon": 67.35,
+   "lat": 25.1,
+   "dir": "NS",
+   "k": 0.999942
+  },
+  {
+   "lon": 67.35,
+   "lat": 25.1,
+   "dir": "EW",
+   "k": 0.99994
+  },
+  {
+   "lon": 66.8,
+   "lat": 24.8,
+   "dir": "NS",
+   "k": 1.000211
+  },
+  {
+   "lon": 66.8,
+   "lat": 24.8,
+   "dir": "EW",
+   "k": 1.000208
+  },
+  {
+   "lon": 67.0,
+   "lat": 24.75,
+   "dir": "NS",
+   "k": 1.000105
+  },
+  {
+   "lon": 67.0,
+   "lat": 24.75,
+   "dir": "EW",
+   "k": 1.000103
+  },
+  {
+   "lon": 67.0,
+   "lat": 25.25,
+   "dir": "NS",
+   "k": 1.000101
+  },
+  {
+   "lon": 67.0,
+   "lat": 25.25,
+   "dir": "EW",
+   "k": 1.000099
+  }
+ ],
+ "k_min": 0.99994,
+ "k_max": 1.000211,
+ "bbox_division": [
+  66.28623,
+  24.42735,
+  67.58278,
+  25.6768
+ ]
+}
